@@ -5,8 +5,6 @@ MAINTAINER Alex Kisakye kisakye@gmail.com
 
 # For SSH access and port redirection
 ENV ROOTPASSWORD sample
-ENV http_proxy="http://plankton.jhb.mwrinfosecurity.com:8080"
-ENV https_proxy="http://plankton.jhb.mwrinfosecurity.com:8080"
 
 # Turn off prompts during installations
 #ENV DEBIAN_FRONTEND noninteractive
