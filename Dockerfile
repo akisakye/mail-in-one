@@ -12,6 +12,7 @@ ENV ROOTPASSWORD sample
 #RUN echo "debconf shared/accepted-oracle-license-v1-1 seen true" | debconf-set-selections
 
 # Update packages
+RUN apt-get clean
 RUN apt-get -y update
 
 # Install system tools / libraries
@@ -29,5 +30,5 @@ RUN sed 's@session\s*required\s*pam_loginuid.so@session optional pam_loginuid.so
 # Expose Node.js app port
 EXPOSE 22,25
 
-CMD ["postfix", "start"]
-
+RUN systemctl enable postfix
+RUN systemctl start postfix
