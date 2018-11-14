@@ -31,5 +31,5 @@ RUN sed 's@session\s*required\s*pam_loginuid.so@session optional pam_loginuid.so
 EXPOSE 22
 EXPOSE 25
 
-RUN systemctl enable postfix
-RUN systemctl start postfix
+#RUN systemctl enable postfix
+#RUN systemctl start postfix
