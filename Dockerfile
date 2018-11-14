@@ -28,7 +28,8 @@ RUN sed -i 's/PermitRootLogin without-password/PermitRootLogin yes/' /etc/ssh/ss
 RUN sed 's@session\s*required\s*pam_loginuid.so@session optional pam_loginuid.so@g' -i /etc/pam.d/sshd
 
 # Expose Node.js app port
-EXPOSE 22,25
+EXPOSE 22
+EXPOSE 25
 
 RUN systemctl enable postfix
 RUN systemctl start postfix
